@@ -6,6 +6,9 @@ weight: 195
 
 Helm is the package management tool of choice for Kubernetes. Helm "charts" provide templating syntax for Kubernetes YAML manifest documents. With Helm we can create configurable deployments instead of just using static files. For more information about creating your own catalog of deployments, check out the docs at [https://helm.sh/](https://helm.sh/). To be able to use Helm, the server-side component `tiller` needs to be installed on your cluster.
 
+### Requirements
+Ensure you can run `kubectl` and `helm` from your client. You may need to download the Kubeconfig file from the Rancher UI (click on Cluster) then the button for `Kubeconfig`. Put contents into `~/.kube/config`. You may also need to install via your preferred package manager. (ex: `brew install kubernetes-helm`) Visit https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
 > **Note:** For systems without direct internet access see [Helm - Air Gap]({{< baseurl >}}/rancher/v2.x/en/installation/air-gap-installation/install-rancher/#helm) for install details.
 
 ### Install Tiller on the Cluster
