@@ -431,7 +431,7 @@ Record the uid/gid:
 id etcd
 ```
 
-- Add the following to the RKE `cluster.yml` kubelet section under `services`:
+- Add the following to the RKE `cluster.yml` etcd section under `services`:
 
 ``` yaml
 services:
@@ -473,8 +473,8 @@ Inspect the Kubelet containers on all hosts and verify that they are running wit
 
 - `--streaming-connection-idle-timeout=<duration greater than 0>`
 - `--authorization-mode=Webhook`
-- `--protect-kernel-defaults=false`
-- `--make-iptables-util-chains=false`
+- `--protect-kernel-defaults=true`
+- `--make-iptables-util-chains=true`
 - `--event-qps=0`
 - `--anonymous-auth=false`
 - `--feature-gates="RotateKubeletServerCertificate=true"`
